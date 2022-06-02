@@ -12,8 +12,17 @@
 
 
 def MatrixProduct(M1, M2, m, n):
+    """
+    :param M1: a 2-D list with order m x n
+    :param M2: a 2-D list with order n x p
+    :return: M3 (m x p) = M1*M2, calculated by making lists
+            of the current row of M1, current column of M2
+            and adding the products of corresponding elements
+            of the lists.
+    :param m: was too lazy to find them separately
+    :param n: also my IDE really wanted me to include them in docstring so...
+    """
     p = len(M2[0])
-
     M3 = []
     for a in range(m):
         t1 = M1[a]
