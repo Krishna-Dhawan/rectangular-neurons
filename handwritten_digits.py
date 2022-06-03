@@ -13,6 +13,12 @@ bias = 0
 M1 = []
 M2 = []
 for i in range(10):
+    """
+        Matrix M1 is a 10x(27*27) matrix with all weights of each
+        digit stored in each row. M2 is a column matrix (27*27)x1 
+        with px. value / 255 is stored in each row. Output is a 
+        10x1 matrix with activation of each output neuron.
+    """
     sheet = weights["Sheet" + str(i+1)]
     L1 = []
     for j in range(res[0]):
@@ -22,7 +28,7 @@ for i in range(10):
             M2.append([G/255])
     M1.append(L1)
 
-response = MatrixProduct(M1, M2, 10, 729)
+response = MatrixProduct(M1, M2, 10, (res[0]*res[1]))
 out = {}
 mx = 0
 for i in range(len(response)):
