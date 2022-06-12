@@ -19,8 +19,8 @@ def MatrixProduct(M1, M2, m, n):
             of the current row of M1, current column of M2
             and adding the products of corresponding elements
             of the lists.
-    :param m: was too lazy to find them separately
-    :param n: also my IDE really wanted me to include them in docstring so...
+    :param m: .
+    :param n: .
     """
     p = len(M2[0])
     M3 = []
