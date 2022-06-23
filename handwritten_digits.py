@@ -5,8 +5,8 @@ from matrix_multiply import MatrixProduct
 import time
 import os
 import json
+from funcns import *
 from sympy import *
-
 x, y, z, t = symbols('x y z t')
 k, m, n = symbols('k m n', integer=True)
 f, g, h = symbols('f g h', cls=Function)
@@ -32,8 +32,8 @@ for i in range(10):
         Matrix M1 is a 10x(27*27) matrix with all weights of each
         digit stored in each row. M2 is a column matrix (27*27)x1 
         with px. value / 255 is stored in each row. Output is a 
-        10x1 matrix with activation of each output neuron. The
-        matrix is multiplied with another weight matrix to get  
+        10x1 matrix (response1) with activation of each output neuron. 
+        The matrix is multiplied with another weight matrix to get  
         final output
     """
     # i = digit, j = row, k = column
@@ -48,6 +48,13 @@ for i in range(10):
             M2.append([G / 255])
     M1.append(L1)
 response1 = MatrixProduct(M1, M2, 10, (res[0] * res[1]))
+
+for i in range(len(response1)):
+    """
+        The activations are turned into a number between 0 
+        and 1 using the sigmoid function
+    """
+    response1[i][0] = sigmoid(response1[i][0])
 
 for a in range(10):
     """
@@ -82,13 +89,8 @@ feedback = input("am i correct? ")
 if feedback == 'no':
     ans = int(input("Correct digit: "))
 
-    cost = 0
-    for i in range(1, 11):
-        if i == ans:
-            cost += (out[i] - 1) ** 2
-        else:
-            cost += out[i] ** 2
-
+    cost = find_cost(out, ans)
+    print(cost)
     for i in range(1, 3):
         for j in range(27 * 27 * 10):
             # diff()
@@ -103,3 +105,4 @@ if feedback == 'no':
             r_sheet.cell(row=(i + 1), column=(j + 1)).value += G / 255
 
 # weights.save("digits.xlsx")
+# weights1.save("digits1.xlsx")
