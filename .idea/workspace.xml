@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1d720dd-5271-4aac-b2c0-5c5c96999434" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Activations.json" beforeDir="false" afterPath="$PROJECT_DIR$/Activations.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digits.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/digits.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digits1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/digits1.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/funcns.py" beforeDir="false" afterPath="$PROJECT_DIR$/funcns.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handwritten_digits.py" beforeDir="false" afterPath="$PROJECT_DIR$/handwritten_digits.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weights.json" beforeDir="false" afterPath="$PROJECT_DIR$/Activations.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655969328709</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="gotta save before testing">
+      <created>1656517997783</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1656517997783</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -209,7 +215,8 @@
     <MESSAGE value="added a hidden layer of neurons" />
     <MESSAGE value="json file for cost function" />
     <MESSAGE value="sdafjklk" />
-    <option name="LAST_COMMIT_MESSAGE" value="sdafjklk" />
+    <MESSAGE value="gotta save before testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="gotta save before testing" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

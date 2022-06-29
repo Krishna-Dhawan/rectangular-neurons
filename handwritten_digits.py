@@ -48,7 +48,7 @@ for i in range(10):
             data["1"][str(res[0] * j + k)] = G / 255
     M1.append(L1)
 response1 = MatrixProduct(M1, M2, 10, (res[0] * res[1]))
-
+print(response1)
 for i in range(len(response1)):
     """
         The activations are turned into a number between 0 
@@ -120,6 +120,7 @@ if feedback == 'no':
                     y = y_ / w
                 except ZeroDivisionError:
                     y = y_ / 0.01
+                # print(w * ac)
                 dcbdw = 2 * ac * sigmderiv(w * ac) * (data["2"][str(a)] - y)
                 sh.cell(row=(i + 1), column=(j + 1)).value += dcbdw
 
