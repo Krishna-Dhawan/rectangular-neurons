@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1d720dd-5271-4aac-b2c0-5c5c96999434" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/funcns.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digits.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/digits.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digits1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/digits1.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/funcns.py" beforeDir="false" afterPath="$PROJECT_DIR$/funcns.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handwritten_digits.py" beforeDir="false" afterPath="$PROJECT_DIR$/handwritten_digits.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weights.json" beforeDir="false" afterPath="$PROJECT_DIR$/weights.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weights.json" beforeDir="false" afterPath="$PROJECT_DIR$/Activations.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +99,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="funcns" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="rectangular-neurons" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Krishna\venv\python3.8\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/funcns.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="handwritten_digits" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="rectangular-neurons" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,6 +165,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.handwritten_digits" />
+        <item itemvalue="Python.funcns" />
         <item itemvalue="Python.calculus" />
         <item itemvalue="Python.website_opener" />
       </list>
@@ -170,14 +194,22 @@
       <option name="project" value="LOCAL" />
       <updated>1655042482365</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="sdafjklk">
+      <created>1655969328709</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655969328709</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="added a hidden layer of neurons" />
     <MESSAGE value="json file for cost function" />
-    <option name="LAST_COMMIT_MESSAGE" value="json file for cost function" />
+    <MESSAGE value="sdafjklk" />
+    <option name="LAST_COMMIT_MESSAGE" value="sdafjklk" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
