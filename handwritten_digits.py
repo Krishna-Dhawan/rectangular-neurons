@@ -26,11 +26,10 @@ with open("Activations.json") as fil:
 
 M1 = []
 M2 = []
-response = []
 for i in range(10):
     """
         Matrix M1 is a 10x(27*27) matrix with all weights of each
-        digit stored in each row. M2 is a column matrix (27*27)x1 
+        neuron stored in each row. M2 is a column matrix (27*27)x1 
         with px. value / 255 is stored in each row. Output is a 
         10x1 matrix (response1) with activation of each output neuron. 
         The matrix is multiplied with another weight matrix to get  
@@ -48,7 +47,7 @@ for i in range(10):
             data["1"][str(res[0] * j + k)] = G / 255
     M1.append(L1)
 response1 = MatrixProduct(M1, M2, 10, (res[0] * res[1]))
-print(response1)
+print("response1:", response1)
 for i in range(len(response1)):
     """
         The activations are turned into a number between 0 
@@ -57,24 +56,27 @@ for i in range(len(response1)):
     response1[i][0] = sigmoid(response1[i][0])
     data["2"][str(i)] = response1[i][0]
 
+w_list = []
 for a in range(10):
     """
         sheet1 contains 10 rows representing 10 weights of
         each of 10 neurons in 10 columns. a is the number
         of digits, w_list is a 1x10 matrix containing weights
-        and is multiplied with the 10x1 matrix to give a 1x1 
-        matrix representing activation of the digit 'a'
+        and is multiplied with the 10x10 matrix to give a 1x10 
+        matrix representing activation of the digits
     """
-    w_list = [[]]
+    l = []
     for j in range(10):
-        w_list[0].append(sheet1.cell(row=(a + 1), column=(j + 1)).value)
-    response.append(MatrixProduct(w_list, response1, 1, 10)[0])
+        l.append(sheet1.cell(row=(a + 1), column=(j + 1)).value)
+    w_list.append(l)
+response = MatrixProduct(w_list, response1, 10, 10)
 
 with open("Activations.json", "r+") as fil:
     json.dump(data, fil)
+    fil.truncate()  # this does something
 
-print(response1)
-print(response)
+print("response 1", response1)
+# print(response)
 out = {}
 mx = 0
 for i in range(len(response)):
@@ -86,7 +88,7 @@ print(f"I think the digit you drew is {mx}")
 print("time:", time.time() - tme)
 
 feedback = input("am i correct? ")
-if feedback == 'no':
+if feedback == 'no' or feedback == "0":
     ans = int(input("Correct digit: "))
 
     cost = find_cost(out, ans)
@@ -104,7 +106,7 @@ if feedback == 'no':
             y = 0
             if i == ans:
                 y = 1
-            dcbdw = 2 * a * sigmderiv(w * a) * (out[i] - y)
+            dcbdw = 2 * a * sigmderiv(w * a) * (y - sigmoid(out[i]))
             sh.cell(row=(i + 1), column=(j + 1)).value += dcbdw
 
     for a in range(10):
@@ -121,7 +123,7 @@ if feedback == 'no':
                 except ZeroDivisionError:
                     y = y_ / 0.01
                 # print(w * ac)
-                dcbdw = 2 * ac * sigmderiv(w * ac) * (data["2"][str(a)] - y)
+                dcbdw = 2 * ac * sigmderiv(w * ac) * (y - data["2"][str(a)])
                 sh.cell(row=(i + 1), column=(j + 1)).value += dcbdw
 
 weights.save("digits.xlsx")

@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/Activations.json" beforeDir="false" afterPath="$PROJECT_DIR$/Activations.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digits.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/digits.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digits1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/digits1.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/funcns.py" beforeDir="false" afterPath="$PROJECT_DIR$/funcns.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handwritten_digits.py" beforeDir="false" afterPath="$PROJECT_DIR$/handwritten_digits.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656517997783</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="gotta save before testing">
+      <created>1656525212292</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1656525212292</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
