@@ -69,6 +69,7 @@ for a in range(10):
     for j in range(10):
         l.append(sheet1.cell(row=(a + 1), column=(j + 1)).value)
     w_list.append(l)
+print(w_list)
 response = MatrixProduct(w_list, response1, 10, 10)
 
 with open("Activations.json", "r+") as fil:
